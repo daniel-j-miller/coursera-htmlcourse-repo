@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>amCharts examples</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="../amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../amcharts/serial.js" type="text/javascript"></script>
+
+        <script>
+            var chart;
+            var graph;
+
+            // note, some of tada points don't have value field
+            var chartData = [
+                {"year":"2004","ACT":0.9,"NSW":4.4,"NT":28.2,"QLD":2.8,"SA":0.9,"TAS":0.4,"VIC":1.7,"WA":2.5,"Aust":3.1},
+                {"year":"2005","ACT":1.2,"NSW":3.5,"NT":45.5,"QLD":3.6,"SA":0.7,"TAS":1.2,"VIC":2.4,"WA":0.9,"Aust":3.1},
+                {"year":"2006","ACT":0.6,"NSW":3.3,"NT":71.2,"QLD":4.4,"SA":2.7,"TAS":1,"VIC":4.5,"WA":2.4,"Aust":4.3},
+                {"year":"2007","ACT":2.6,"NSW":6.6,"NT":54.9,"QLD":6.2,"SA":3.1,"TAS":1.6,"VIC":8.2,"WA":4.9,"Aust":6.8},
+                {"year":"2008","ACT":1.2,"NSW":6.1,"NT":37.6,"QLD":4.6,"SA":2.9,"TAS":1.6,"VIC":7.2,"WA":8.1,"Aust":6.2},
+                {"year":"2009","ACT":3.1,"NSW":7.5,"NT":16.8,"QLD":4.4,"SA":2.3,"TAS":2,"VIC":7.2,"WA":4,"Aust":6},
+                {"year":"2010","ACT":3.9,"NSW":6,"NT":18.7,"QLD":5.2,"SA":1.4,"TAS":1.2,"VIC":5.5,"WA":3.5,"Aust":5.1},
+                {"year":"2011","ACT":2.7,"NSW":5.9,"NT":13,"QLD":7.6,"SA":1.1,"TAS":1.2,"VIC":6,"WA":5.3,"Aust":5.7},
+                {"year":"2012","ACT":4,"NSW":7.2,"NT":5.9,"QLD":8.5,"SA":2.7,"TAS":2.7,"VIC":8.5,"WA":3.1,"Aust":6.9},
+                {"year":"2013","ACT":2.6,"NSW":8.3,"NT":9.5,"QLD":7.2,"SA":2.5,"TAS":3.9,"VIC":11.2,"WA":3.3,"Aust":7.6},
+                {"year":"2014","ACT":4.7,"NSW":10.1,"NT":29.6,"QLD":8.4,"SA":1.7,"TAS":2.7,"VIC":11.2,"WA":3.6,"Aust":8.7},
+                {"year":"2015","ACT":3.6,"NSW":9.8,"NT":83.8,"QLD":12,"SA":4.1,"TAS":2.9,"VIC":15.8,"WA":6.3,"Aust":11.5},
+                {"year":"2016","ACT":3.3,"NSW":9.9,"NT":93.7,"QLD":14.1,"SA":5.1,"TAS":1,"VIC":17.5,"WA":12.9,"Aust":13.2},
+                {"year":"2017","ACT":0.8,"NSW":0.3,"NT":7.4,"QLD":1.9,"SA":0,"TAS":0,"VIC":0.8,"WA":0.9,"Aust":0.9}
+
+            ];
+
+
+            AmCharts.ready(function () {
+                // SERIAL CHART
+                chart = new AmCharts.AmSerialChart();
+
+                chart.marginTop = 0;
+                chart.marginRight = 0;
+                chart.dataProvider = chartData;
+                chart.categoryField = "year";
+                chart.dataDateFormat = "YYYY";
+                chart.balloon.cornerRadius = 6;
+
+                // AXES
+                // category
+                var categoryAxis = chart.categoryAxis;
+                categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+                categoryAxis.minPeriod = "YYYY"; // our data is yearly, so we set minPeriod to YYYY
+                categoryAxis.dashLength = 1;
+                categoryAxis.minorGridEnabled = true;
+                categoryAxis.axisColor = "#DADADA";
+
+                // value
+                var valueAxis = new AmCharts.ValueAxis();
+                valueAxis.axisAlpha = 0;
+                valueAxis.dashLength = 1;
+                valueAxis.inside = true;
+                valueAxis.title = "Rate per 100,000";
+                chart.addValueAxis(valueAxis);
+
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#d03939";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "NT";
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "NT";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NT]]/100,000</span></b>";
+                chart.addGraph(graph);
+// GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#562ee5";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "NSW"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "NSW";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NSW]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#816ae6";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "ACT"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "ACT";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[ACT]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#a791c5";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "VIC"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "VIC";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[VIC]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#498196";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "TAS"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "TAS";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[TAS]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#511b6a";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "SA"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "SA";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[SA]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#a7d204";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "QLD"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "QLD";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[QLD]] C</span></b>";
+                chart.addGraph(graph);
+                // GRAPH
+                graph = new AmCharts.AmGraph();
+                graph.lineColor = "#c9b91d";
+                graph.negativeLineColor = "#487dac"; // this line makes the graph to change color when it drops below 0
+                graph.bullet = "round";
+                graph.bulletSize = 8;
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.title = "Aust"
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.connect = false; // this makes the graph not to connect data points if data is missing
+                graph.lineThickness = 2;
+                graph.valueField = "Aust";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[Aust]] C</span></b>";
+                chart.addGraph(graph);
+                // CURSOR
+                var chartCursor = new AmCharts.ChartCursor();
+                chartCursor.cursorAlpha = 0;
+                chartCursor.cursorPosition = "mouse";
+                chartCursor.categoryBalloonDateFormat = "YYYY";
+                chartCursor.graphBulletSize = 2;
+                chart.addChartCursor(chartCursor);
+
+                chart.creditsPosition = "bottom-right";
+                // LEGEND
+                var legend = new AmCharts.AmLegend();
+                legend.borderAlpha = 0.2;
+                legend.horizontalGap = 20;
+                chart.addLegend(legend);
+
+                // WRITE
+                chart.write("chartdiv");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="chartdiv" style="width:100%; height:600px;"></div>
+    </body>
+
+</html>
