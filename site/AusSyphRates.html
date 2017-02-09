@@ -73,7 +73,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "NT";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NT]]/100,000</span></b>";
+                graph.balloonText = "NT: [[category]]<br><b><span style='font-size:14px;'>[[NT]] per 100,000</span></b>";
                 chart.addGraph(graph);
 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -88,7 +88,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "NSW";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NSW]] C</span></b>";
+                graph.balloonText = "NSW: [[category]]<br><b><span style='font-size:14px;'>NSW:[[NSW]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -103,7 +103,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "ACT";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[ACT]] C</span></b>";
+                graph.balloonText = "ACT: [[category]]<br><b><span style='font-size:14px;'>[[ACT]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -118,7 +118,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "VIC";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[VIC]] C</span></b>";
+                graph.balloonText = "VIC: [[category]]<br><b><span style='font-size:14px;'>[[VIC]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -133,7 +133,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "TAS";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[TAS]] C</span></b>";
+                graph.balloonText = "TAS [[category]]<br><b><span style='font-size:14px;'>[[TAS]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -148,7 +148,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "SA";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[SA]] C</span></b>";
+                graph.balloonText = "SA: [[category]]<br><b><span style='font-size:14px;'>[[SA]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -163,7 +163,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "QLD";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[QLD]] C</span></b>";
+                graph.balloonText = "QLD: [[category]]<br><b><span style='font-size:14px;'>[[QLD]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // GRAPH
                 graph = new AmCharts.AmGraph();
@@ -178,13 +178,14 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "Aust";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[Aust]] C</span></b>";
+                graph.balloonText = "Aust: [[category]]<br><b><span style='font-size:14px;'>[[Aust]] per 100,000</span></b>";
                 chart.addGraph(graph);
                 // CURSOR
                 var chartCursor = new AmCharts.ChartCursor();
                 chartCursor.cursorAlpha = 0;
                 chartCursor.cursorPosition = "mouse";
                 chartCursor.categoryBalloonDateFormat = "YYYY";
+                chartCursor.oneBalloonOnly = true;
                 chartCursor.graphBulletSize = 2;
                 chart.addChartCursor(chartCursor);
 
@@ -202,6 +203,7 @@
     </head>
 
     <body>
+        <h1>Australian syphilis (&#60; 2yrs) rate per 100,000 - by jurisdiction</h1>
         <div id="chartdiv" style="width:100%; height:600px;"></div>
     </body>
 
