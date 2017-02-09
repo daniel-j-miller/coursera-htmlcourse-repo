@@ -8,7 +8,7 @@
         <script src="../amcharts/amcharts.js" type="text/javascript"></script>
         <script src="../amcharts/serial.js" type="text/javascript"></script>
 
-        <script>
+        <script type="text/javascript">
             var chart;
             var graph;
 
@@ -73,7 +73,7 @@
                 graph.connect = false; // this makes the graph not to connect data points if data is missing
                 graph.lineThickness = 2;
                 graph.valueField = "NT";
-                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NT]]/100,000</span></b>";
+                graph.balloonText = "[[category]]<br><b><span style='font-size:14px;'>[[NT]] per 100,000</span></b>";
                 chart.addGraph(graph);
 // GRAPH
                 graph = new AmCharts.AmGraph();
