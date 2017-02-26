@@ -211,10 +211,16 @@
         <div id="chartdiv" >
         </div>
         <div id="buttDiv" >
-        <button id="diseaseButton" type="button" onclick="changeData(gonoData, gonoTitle)">Gonococcal infection</button>
-        <button id="diseaseButton" type="button" onclick="changeData(chlamData, chlamTitle)">Chlamydial infection</button>
-        <button id="diseaseButton" type="button" onclick="changeData(syphData, syphTitle)">Syphilis &#60; 2 years</button>
+        <button class="disease" id="diseaseButton" type="button" onclick="changeData(gonoData, gonoTitle)">Gonococcal infection</button>
+        <button class="disease" id="diseaseButton" type="button" onclick="changeData(chlamData, chlamTitle)">Chlamydial infection</button>
+        <button class="disease" id="diseaseButton" type="button" onclick="changeData(syphData, syphTitle)">Syphilis &#60; 2 years</button>
         </div>
+        <div id="buttDivType" >
+        <button class="stat" id="rateCase" type="button" onclick="changeData(gonoData, gonoTitle)">Rate per<br>100,000</button>
+        <button class="stat" id="rateCase" type="button" onclick="changeData(chlamData, chlamTitle)">Number of<br>cases</button>
+        </div>
+
+
     </body>
     <script type="text/javascript">
         

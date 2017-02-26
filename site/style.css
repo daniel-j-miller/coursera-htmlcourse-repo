@@ -17,7 +17,7 @@ h1 {
 }
 
 #diseaseButton {
-    background-color: #d2ebd2; /* Green */
+    background-color: #d2ebd2; 
     border: none;
     color: #757671;
     
@@ -37,6 +37,30 @@ h1 {
 	margin-right: auto;
 	margin-left: auto;
 	width:70%;
+
+}
+#rateCase {
+    background-color: #ebebe6; 
+    border: none;
+    color: #2e2f2d;
+    
+    margin-left: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    border-radius: 4px;
+    width: 49.5%;
+    height: 60px;
+
+}
+#buttDivType {
+	position: relative;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width:50%;
 
 }
 a:link {color: #84c4e2;}
