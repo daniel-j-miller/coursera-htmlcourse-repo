@@ -1,12 +1,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3-polygon.v1.min.js"></script>
 <script type="text/javascript">
-
+var point = [134.074443, -23.695708]
 $.ajax({
   type: "GET",
   url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json',
   success: function(data) {
-    for (i=0; i <10; i++){
-    console.log(data.features[i].attributes.RA_NAME11)
+    for (i=0; i < data.features.length; i++){
+      var poly = data.features[i].geometry.rings[0]
+      if (d3.polygonContains(poly, point)){
+          console.log(data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11)};
+          break;      
     }
   }})
 
