@@ -2,12 +2,10 @@
 <script type="text/javascript">
 
 $.ajax({
-  url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json'
-},
-       {
-  dataType: 'json',
+  type: "GET",
+  url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json',
   success: function(data) {
-    console.log(data[0].features.length)
-  }})
+    console.log(data[0].features[0].length)
+  })
 
 </script>
