@@ -60,7 +60,7 @@
               map: resultsMap,
               position: results[0].geometry.location
             });
-            var point = [results[0].geometry.location.lat(),results[0].geometry.location.lng()]
+            var point = [results[0].geometry.location.lng(),results[0].geometry.location.lat()]
             $.ajax({
               type: "GET",
               url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json',
