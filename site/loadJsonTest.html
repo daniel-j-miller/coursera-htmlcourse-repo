@@ -7,7 +7,7 @@ $.ajax({
   success: function(data) {
     $.each ( data, function(i,j){
       if (data[i].geometry.rings.length > 0){
-      console.log(data[i].geometry.rings[1])
+      console.log(data[i].geometry.rings[0])
       }
       else {
       console.log("nope")
