@@ -6,8 +6,8 @@ $.ajax({
   url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json',
   success: function(data) {
     $.each ( data, function(i,j){
-      if (length(data.features[i].geometry.rings[1]) > 0):
-      console.log(length(data.features[i].geometry.rings))
+      if (data.features[i].geometry.rings[1].length) > 0):
+      console.log(data.features[i].geometry.rings[1]))
     }
   }})
 
