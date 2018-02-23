@@ -9,8 +9,9 @@ $.ajax({
     for (i=0; i < data.features.length; i++){
       var poly = data.features[i].geometry.rings[0]
       if (d3.polygonContains(poly, point)){
-          console.log(data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11)};
+          console.log(data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11)
           break;      
+        }
     }
   }})
 
