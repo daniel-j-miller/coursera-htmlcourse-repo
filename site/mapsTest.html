@@ -19,11 +19,12 @@
       #input-panel {
         position: absolute;
         top: 10px;
-        left: 25%;
+        left: 10%;
         z-index: 5;
-        background-color: #fff;
+        background-color: #dfeaf1;
         padding: 5px;
-        border: 1px solid #999;
+        border-radius: 5px;
+        border: 2px solid #6297bc;
         text-align: center;
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
@@ -31,19 +32,24 @@
       }
       #result-panel {
         position: absolute;
-        top: 80px;
-        left: 25%;
-        height: 20px;
+        top: 60px;
+        left: 10%;
+        height: 10px;
         width: 400px;
         z-index: 5;
-        background-color: #fff;
+        background-color: #dfeaf1;
         padding: 10px;
-        border: 1px solid #999;
+        border-radius: 5px;
+        border: 2px solid #6297bc;
         text-align: left;
-        font-size: 
+        font-size: 15px;
         font-family: 'Roboto','sans-serif';
-        line-height: 30px;
+        line-height: 10px;
         padding-left: 10px;
+      }
+      #result {
+        position: absolute;
+        transform:  translateY(-100%);
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -65,7 +71,6 @@
           center: {lat: -34.397, lng: 150.644}
         });
         var geocoder = new google.maps.Geocoder();
-
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
@@ -87,7 +92,8 @@
                 for (i=0; i < data.features.length; i++){
                   var poly = data.features[i].geometry.rings[0]
                   if (d3.polygonContains(poly, point)){
-                      $( "p" ).text( data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11 );
+                    var result_text = data.features[i].attributes.STE_NAME11 +": "+ data.features[i].attributes.RA_NAME11
+                      $( "p" ).text( result_text );
                       break;
                     }
                 }
