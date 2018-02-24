@@ -31,7 +31,7 @@
       }
       #result-panel {
         position: absolute;
-        top: 40px;
+        top: 80px;
         left: 25%;
         z-index: 5;
         background-color: #fff;
@@ -52,7 +52,7 @@
       <input id="submit" type="button" value="Geocode">
     </div>
     <div id="result-panel">
-      <p id="result">"will go here</p>
+      <p id="result"></p>
     </div>
     <div id="map"></div>
     <script>
@@ -85,6 +85,7 @@
                   var poly = data.features[i].geometry.rings[0]
                   if (d3.polygonContains(poly, point)){
                       console.log(data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11)
+                      $( "p" ).text( data.features[i].attributes.STE_NAME11, data.features[i].attributes.RA_NAME11 );
                       break;
                     }
                 }
