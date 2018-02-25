@@ -82,7 +82,8 @@
             for (i=0;i<results[0].address_components.length;i++){
               if(results[0].address_components[i].types[0]=="administrative_area_level_1"){
             console.log(results[0].address_components[i].short_name)
-              }
+                break;
+              }}
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
               map: resultsMap,
