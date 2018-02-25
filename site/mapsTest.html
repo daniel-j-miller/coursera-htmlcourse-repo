@@ -96,12 +96,13 @@
               url: url_json,
               success: function(data) {
                 for (i=0; i < data.features.length; i++){
+                  if (typeof data.features[i].geometry.rings[0] !== 'undefined') {
                   var poly = data.features[i].geometry.rings[0]
                   if (d3.polygonContains(poly, point)){
                     var result_text = data.features[i].attributes.STE_NAME11 +": "+ data.features[i].attributes.RA_NAME11
                       $( "p" ).text( result_text );
                       break;
-                    }
+                    }}
                 }
               }})
           } else {
