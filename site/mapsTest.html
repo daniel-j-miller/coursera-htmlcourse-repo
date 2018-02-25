@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geocoding service</title>
+    <title>Statistical area tool</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -81,10 +81,16 @@
           if (status === 'OK') {
             for (i=0;i<results[0].address_components.length;i++){
               if(results[0].address_components[i].types[0]=="administrative_area_level_1"){
-            var url_json = 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/'
-                + results[0].address_components[i].short_name + '_RA11.json'
+                if (results[0].address_components[i].short_name == 'ACT'){
+                var juris = 'NSW'
+                }
+                else{
+                var juris = results[0].address_components[i].short_name;
+                }
                 break;
               }}
+            var url_json = 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/'
+                + juris + '_RA11.json';
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
               map: resultsMap,
