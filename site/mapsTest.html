@@ -79,6 +79,7 @@
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
+            console.log(results[0])
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
               map: resultsMap,
@@ -87,7 +88,7 @@
             var point = [results[0].geometry.location.lng(),results[0].geometry.location.lat()]
             $.ajax({
               type: "GET",
-              url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/RA_2011_NTSA_FeaturesToJSON.json',
+              url: 'https://daniel-j-miller.github.io/coursera-htmlcourse-repo/site/WA_RA11.json',
               success: function(data) {
                 for (i=0; i < data.features.length; i++){
                   var poly = data.features[i].geometry.rings[0]
