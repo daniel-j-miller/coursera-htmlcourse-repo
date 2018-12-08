@@ -89,7 +89,7 @@ d3.csv("sankey.csv", function(error, data) {
   graph.nodes.forEach(function (d, i) {
     graph.nodes[i] = { "name": d };
   });
-
+console.log(graph)
   sankey
       .nodes(graph.nodes)
       .links(graph.links)
