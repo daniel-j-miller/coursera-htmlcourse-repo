@@ -1,8 +1,44 @@
 source,target,value
-Bar ry,Elvis,2
-Frodo,Elvis,2
-Frodo,Sarah,2
-Barry,Alice,2
-Elvis,Sarah,2
-Elvis,Alice,2
-Sarah,Alice,4
+Central Coast,Capital Region,662
+Central West,Capital Region,1136
+Coffs Harbour - Grafton,Capital Region,198
+Far West and Orana,Capital Region,329
+Hunter Valley exc Newcastle,Capital Region,461
+Illawarra,Capital Region,1226
+Capital Region,Central Coast,413
+Central West,Central Coast,830
+Coffs Harbour - Grafton,Central Coast,380
+Far West and Orana,Central Coast,390
+Hunter Valley exc Newcastle,Central Coast,1478
+Illawarra,Central Coast,309
+Capital Region,Central West,864
+Central Coast,Central West,754
+Coffs Harbour - Grafton,Central West,217
+Far West and Orana,Central West,2127
+Hunter Valley exc Newcastle,Central West,761
+Illawarra,Central West,614
+Capital Region,Coffs Harbour - Grafton,349
+Central Coast,Coffs Harbour - Grafton,517
+Central West,Coffs Harbour - Grafton,362
+Far West and Orana,Coffs Harbour - Grafton,271
+Hunter Valley exc Newcastle,Coffs Harbour - Grafton,445
+Illawarra,Coffs Harbour - Grafton,228
+Capital Region,Far West and Orana,236
+Central Coast,Far West and Orana,437
+Central West,Far West and Orana,1392
+Coffs Harbour - Grafton,Far West and Orana,199
+Hunter Valley exc Newcastle,Far West and Orana,458
+Illawarra,Far West and Orana,226
+Capital Region,Hunter Valley exc Newcastle,408
+Central Coast,Hunter Valley exc Newcastle,2428
+Central West,Hunter Valley exc Newcastle,1067
+Coffs Harbour - Grafton,Hunter Valley exc Newcastle,426
+Far West and Orana,Hunter Valley exc Newcastle,620
+Illawarra,Hunter Valley exc Newcastle,411
+Capital Region,Illawarra,1376
+Central Coast,Illawarra,356
+Central West,Illawarra,942
+Coffs Harbour - Grafton,Illawarra,227
+Far West and Orana,Illawarra,312
+Hunter Valley exc Newcastle,Illawarra,253
+
