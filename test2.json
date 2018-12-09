@@ -1,44 +1,201 @@
 {
 	"nodes": [{
-		"name": "first"
+		"name": "From Central Coast"
 	}, {
-		"name": "Central Coast"
+		"name": "From Central West"
 	}, {
-		"name": "Central West"
+		"name": "From Coffs Harbour - Grafton"
 	}, {
-		"name": "Coffs Harbour - Grafton"
+		"name": "From Far West and Orana"
 	}, {
-		"name": "Far West and Orana"
+		"name": "From Hunter Valley exc Newcastle"
 	}, {
-		"name": "Hunter Valley exc Newcastle"
+		"name": "From Illawarra"
 	}, {
-		"name": "Illawarra"
+		"name": "From Capital Region"
 	}, {
-		"name": "Capital Region"
+		"name": "To Central Coast"
+	}, {
+		"name": "To Central West"
+	}, {
+		"name": "To Coffs Harbour - Grafton"
+	}, {
+		"name": "To Far West and Orana"
+	}, {
+		"name": "To Hunter Valley exc Newcastle"
+	}, {
+		"name": "To Illawarra"
+	}, {
+		"name": "To Capital Region"
 	}],
 	"links": [{
 		"source": 0,
-		"target": 1,
+		"target": 13,
 		"value": 662
 	}, {
 		"source": 1,
-		"target": 3,
+		"target": 13,
 		"value": 1136
 	}, {
-		"source": 3,
-		"target": 4,
+		"source": 2,
+		"target": 13,
 		"value": 198
 	}, {
-		"source": 5,
-		"target": 2,
+		"source": 3,
+		"target": 13,
 		"value": 329
 	}, {
-		"source": 5,
-		"target": 6,
+		"source": 4,
+		"target": 13,
 		"value": 461
+	}, {
+		"source": 5,
+		"target": 13,
+		"value": 1226
 	}, {
 		"source": 6,
 		"target": 7,
-		"value": 1226
+		"value": 413
+	}, {
+		"source": 1,
+		"target": 7,
+		"value": 830
+	}, {
+		"source": 2,
+		"target": 7,
+		"value": 380
+	}, {
+		"source": 3,
+		"target": 7,
+		"value": 390
+	}, {
+		"source": 4,
+		"target": 7,
+		"value": 1478
+	}, {
+		"source": 5,
+		"target": 7,
+		"value": 309
+	}, {
+		"source": 6,
+		"target": 8,
+		"value": 864
+	}, {
+		"source": 0,
+		"target": 8,
+		"value": 754
+	}, {
+		"source": 2,
+		"target": 8,
+		"value": 217
+	}, {
+		"source": 3,
+		"target": 8,
+		"value": 2127
+	}, {
+		"source": 4,
+		"target": 8,
+		"value": 761
+	}, {
+		"source": 5,
+		"target": 8,
+		"value": 614
+	}, {
+		"source": 6,
+		"target": 9,
+		"value": 349
+	}, {
+		"source": 0,
+		"target": 9,
+		"value": 517
+	}, {
+		"source": 1,
+		"target": 9,
+		"value": 362
+	}, {
+		"source": 3,
+		"target": 9,
+		"value": 271
+	}, {
+		"source": 4,
+		"target": 9,
+		"value": 445
+	}, {
+		"source": 5,
+		"target": 9,
+		"value": 228
+	}, {
+		"source": 6,
+		"target": 10,
+		"value": 236
+	}, {
+		"source": 0,
+		"target": 10,
+		"value": 437
+	}, {
+		"source": 1,
+		"target": 10,
+		"value": 1392
+	}, {
+		"source": 2,
+		"target": 10,
+		"value": 199
+	}, {
+		"source": 4,
+		"target": 10,
+		"value": 458
+	}, {
+		"source": 5,
+		"target": 10,
+		"value": 226
+	}, {
+		"source": 6,
+		"target": 11,
+		"value": 408
+	}, {
+		"source": 0,
+		"target": 11,
+		"value": 2428
+	}, {
+		"source": 1,
+		"target": 11,
+		"value": 1067
+	}, {
+		"source": 2,
+		"target": 11,
+		"value": 426
+	}, {
+		"source": 3,
+		"target": 11,
+		"value": 620
+	}, {
+		"source": 5,
+		"target": 11,
+		"value": 411
+	}, {
+		"source": 6,
+		"target": 12,
+		"value": 1376
+	}, {
+		"source": 0,
+		"target": 12,
+		"value": 356
+	}, {
+		"source": 1,
+		"target": 12,
+		"value": 942
+	}, {
+		"source": 2,
+		"target": 12,
+		"value": 227
+	}, {
+		"source": 3,
+		"target": 12,
+		"value": 312
+	}, {
+		"source": 4,
+		"target": 12,
+		"value": 253
 	}]
+
 }
