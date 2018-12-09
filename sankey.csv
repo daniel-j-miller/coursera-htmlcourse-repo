@@ -1,19 +1,19 @@
 source,target,value
-"Central Coast","Capital Region",662
-"Central West","Capital Region",1136
-"Coffs Harbour - Grafton","Capital Region",198
-"Far West and Orana","Capital Region",329
-"Hunter Valley exc Newcastle","Capital Region",461
-"Illawarra","Capital Region",1226
-"Capital Region","Central Coast",413
-"Central West","Central Coast",830
-"Coffs Harbour - Grafton","Central Coast",380
-"Far West and Orana","Central Coast",390
-"Hunter Valley exc Newcastle","Central Coast",1478
-"Illawarra","Central Coast",309
-"Capital Region","Central West",864
-"Central Coast","Central West",754
-"Coffs Harbour - Grafton","Central West",217
-"Far West and Orana","Central West",2127
-"Hunter Valley exc Newcastle","Central West",761
-"Illawarra","Central West",614
+"From Central Coast","To Capital Region",662
+"From Central West","To Capital Region",1136
+"From Coffs Harbour - Grafton","To Capital Region",198
+"From Far West and Orana","To Capital Region",329
+"From Hunter Valley exc Newcastle","To Capital Region",461
+"From Illawarra","To Capital Region",1226
+"From Capital Region","To Central Coast",413
+"From Central West","To Central Coast",830
+"From Coffs Harbour - Grafton","To Central Coast",380
+"From Far West and Orana","To Central Coast",390
+"From Hunter Valley exc Newcastle","To Central Coast",1478
+"From Illawarra","To Central Coast",309
+"From Capital Region","To Central West",864
+"From Central Coast","To Central West",754
+"From Coffs Harbour - Grafton","To Central West",217
+"From Far West and Orana","To Central West",2127
+"From Hunter Valley exc Newcastle","To Central West",761
+"From Illawarra","To Central West",614
