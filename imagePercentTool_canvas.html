@@ -25,42 +25,35 @@ vertical-align: middle;
 </style>
 
 <script>
-     function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+function readURL(input) {
+    if (input.files && input.files[0]) {
+	var reader = new FileReader();
 
-                reader.onload = function (e) {
+	reader.onload = function (e) {
 
-					var canvas = document.getElementById('canvas'),
-					context = canvas.getContext('2d');
+		var canvas = document.getElementById('canvas'),
+		context = canvas.getContext('2d');
 
-					make_base();
-					canvas.width = base_image.width;
-					canvas.height = base_image.height;
-					function make_base()
-					{
-					  base_image = new Image();
-					  base_image.src =  e.target.result;
-					  base_image.onload = function(){
+		make_base();
 
-						context.drawImage(base_image, 0, 0 );
-
-
-					  }
-					}
-                        
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+	function make_base()
+	{
+	base_image = new Image();
+	base_image.src =  e.target.result;
+	base_image.onload = function(){
+	canvas.width = base_image.width;
+	canvas.height = base_image.height;
+	context.drawImage(base_image, 0, 0 );
+	}
+	}
+      };
+	reader.readAsDataURL(input.files[0]);
+            }}
+	
 $( document ).ready(function() {
-
-
 
 $("#canvas").click(function(e){
      getPosition(e); 
-	 
 });
 
 var pointSize = 3;
@@ -69,8 +62,8 @@ function getPosition(event){
      var rect = canvas.getBoundingClientRect();
      var x = event.clientX - rect.left;
      var y = event.clientY - rect.top;
-     var xp = ((1-((rect.right - event.clientX)/(rect.right-rect.left)))).toFixed(3)
-	 var yp = ((((rect.bottom - event.clientY)/(rect.bottom-rect.top)))).toFixed(3)
+     var xp = ((1-((rect.right - event.clientX)/canvas.width))).toFixed(3)
+	 var yp = ((((event.clientY - rect.top)/canvas.height))).toFixed(3)
 	 $('#pp').append("<p>"+xp+""+" "+yp+"</p>")
      drawCoordinates(x,y);
 }
